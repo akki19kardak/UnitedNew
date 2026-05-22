@@ -1,0 +1,112 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+/* -------------------- THE REAL FIX -------------------- */
+/* Keep map always behind UI */
+.leaflet-container {
+  position: relative !important;
+  z-index: 0 !important;
+}
+
+/* Allow popups and markers to behave normally */
+.leaflet-pane { z-index: 400; }
+.leaflet-tile-pane { z-index: 200; }
+.leaflet-overlay-pane { z-index: 400; }
+.leaflet-shadow-pane { z-index: 500; }
+.leaflet-marker-pane { z-index: 600; }
+.leaflet-tooltip-pane { z-index: 650; }
+.leaflet-popup-pane { z-index: 700; }
+
+/* Controls (zoom buttons) below modal panels */
+.leaflet-top,
+.leaflet-bottom,
+.leaflet-control {
+  z-index: 800 !important;
+}
+
+/* -------------------- THEME -------------------- */
+@theme {
+  --color-primary: #3c83f6;
+  --color-background-light: #f5f7f8;
+  --color-background-dark: #101722;
+  --font-display: "Inter", sans-serif;
+  --radius: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+html {
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 320px;
+  color: #1e293b;
+}
+
+/* remove scrollbars */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* range slider */
+input[type="range"] {
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+/* focus ring */
+input:focus, select:focus, textarea:focus, button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* text clamp */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* shimmer loading */
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+/* filter animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.25s ease;
+}

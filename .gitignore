@@ -1,0 +1,24 @@
+# Ignore dependencies (all apps)
+node_modules/
+**/node_modules/
+
+# Environment variables
+.env
+**/.env
+
+# Logs
+*.log
+
+# Build output
+dist/
+build/
+
+# Vite cache
+.vite/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
