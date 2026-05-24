@@ -8,17 +8,7 @@
   A full-stack NGO donation and volunteer management platform that bridges the gap between non-profits, dedicated volunteers, and generous donors.
 </p>
 
-<p align="center">
-  <a href="https://unitedimpact-app.netlify.app">
-    <img src="https://img.shields.io/badge/Frontend-Netlify-00C7B7?style=for-the-badge&logo=netlify" />
-  </a>
-  <a href="https://unitedimpact-backend.onrender.com">
-    <img src="https://img.shields.io/badge/Backend-Render-46E3B7?style=for-the-badge&logo=render" />
-  </a>
-     <a href="https://unitedimpact-app.netlify.app/admin/registe">
-    <img src="https://img.shields.io/badge/Admin-Netlify-46E3B7?style=for-the-badge&logo=netlify" />
-  </a>
-</p>
+
 
 ---
 
@@ -26,8 +16,8 @@
 
 | Service | URL |
 |---|---|
-| 🌐 Frontend | [unitedimpact-app.netlify.app](https://unitedimpact-app.netlify.app) |
-| 🔧 Backend API | [unitedimpact-backend.onrender.com](https://unitedimpact-backend.onrender.com) |
+| 🌐 Frontend | [unitedimpact-app.netlify.app](https://united-new.vercel.app/) |
+| 🔧 Backend API | [unitedimpact-backend.onrender.com](https://unitednew.onrender.com) |
 | 🛡️ Admin Panel | [unitedimpact-app.netlify.app/admin/register](https://unitedimpact-app.netlify.app/admin/register) |
 
 ---
@@ -293,39 +283,6 @@ cd backend
 node seedNGOs.js
 node seedCampaigns.js
 ```
-
----
-
-## 👥 Contributors
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/AkshatKardak">
-        <img src="https://avatars.githubusercontent.com/u/176505472?v=4" width="80px;" alt="Akshat"/><br />
-        <b>AkshatKardak</b>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/GauravGirkar">
-        <img src="https://github.com/GauravGirkar.png" width="80px;" alt="Gaurav"/><br />
-        <b>GauravGirkar</b>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/pratikkamble2004">
-        <img src="https://github.com/pratikkamble2004.png" width="80px;" alt="Pratik"/><br />
-        <b>pratikkamble2004</b>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/TickleFuse09">
-        <img src="https://github.com/TickleFuse09.png" width="80px;" alt="Varad"/><br />
-        <b>TickleFuse09</b>
-      </a>
-    </td>
-  </tr>
-</table>
 
 ---
 
